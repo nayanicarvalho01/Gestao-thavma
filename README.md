@@ -1,42 +1,36 @@
-# 💈 Thávma BarberPay — Sistema de Gestão de Pagamentos
+<p align="center">
+  <img src="assets/thavma-logo.png" alt="Logo Thávma Barbearia" width="200"/>
+</p>
 
-Sistema desenvolvido para automatizar o controle de pagamentos, serviços e clientes da **Thávma Barbearia**, substituindo o controle manual em planilhas e anotações físicas.
+<h1 align="center">💈 Thávma Barbearia – Sistema de Gestão</h1>
 
-O objetivo é centralizar o processo de registro de serviços prestados, barbeiros responsáveis, clientes, descontos e formas de pagamento — gerando dados organizados para relatórios e gestão financeira.
-
----
-
-## 🧰 Tecnologias Utilizadas
-
-- **Java 17+**
-- **Spring Boot 3**
-  - Spring Web
-  - Spring Data JPA
-  - Validation
-- **MySQL (Aiven Cloud)**
-- **Lombok**
-- **MapStruct**
-- **SpringDoc / Swagger**
-- **DBeaver** (para gerenciar o banco)
-- **Maven** (gerenciamento de dependências)
+<p align="center">
+  <b>Elegância, precisão e inovação reunidas em um sistema criado para transformar a experiência de gestão de barbearias.</b>
+</p>
 
 ---
 
-## ⚙️ Funcionalidades Principais
+## 🧭 Sobre o Projeto
 
-✅ Cadastro de barbeiros  
-✅ Cadastro de produtos e serviços (com preço)  
-✅ Cadastro de clientes (nome e telefone)  
-✅ Registro de pagamentos:
-  - seleção do barbeiro responsável  
-  - associação de cliente (novo ou existente)  
-  - múltiplos serviços/produtos com quantidade  
-  - campo de desconto  
-  - forma de pagamento (PIX, dinheiro, cartão etc.)
-✅ Armazenamento completo no banco de dados  
-✅ Base para relatórios de faturamento por barbeiro, forma de pagamento e data
+O **Sistema de Gestão da Thávma Barbearia** foi desenvolvido para otimizar o controle operacional e administrativo da barbearia — desde o agendamento e cadastro de clientes até a gestão de barbeiros, serviços, finanças e relatórios.
+
+Este projeto nasceu para unir **estilo e eficiência**, refletindo a identidade visual e a filosofia da Thávma: **sofisticação, autenticidade e resultado.**
 
 ---
 
-## 🧱 Estrutura das Entidades
+## ⚙️ Tecnologias Utilizadas
+
+| Camada | Tecnologia |
+|:--------|:------------|
+| **Back-end** | Java 17 + Spring Boot |
+| **Banco de Dados** | PostgreSQL |
+| **Gerenciamento de Dependências** | Maven |
+| **IDE Recomendada** | IntelliJ IDEA / VSCode |
+| **Testes e Logs** | JUnit, Lombok, Spring Validation |
+| **Integrações Futuras** | API de Pagamentos, Painel Web (React) |
+
+---
+
+## 🧩 Estrutura do Projeto
+
 
