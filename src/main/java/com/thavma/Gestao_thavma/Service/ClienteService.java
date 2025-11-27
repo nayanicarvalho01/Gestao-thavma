@@ -1,6 +1,6 @@
 package com.thavma.Gestao_thavma.Service;
 
-import com.thavma.Gestao_thavma.DTO.ClienteRequestDTO;
+import com.thavma.Gestao_thavma.DTO.AtendimentoRequestDTO;
 import com.thavma.Gestao_thavma.DTO.ClienteResponseDTO;
 import com.thavma.Gestao_thavma.Exceptions.ResourceNotFoundException;
 import com.thavma.Gestao_thavma.Model.Clientes;
@@ -18,15 +18,12 @@ public class ClienteService {
         this.clienteRepository = clienteRepository;
     }
 
-    public ClienteResponseDTO cadastrarCliente(ClienteRequestDTO dto){
-
+    public ClienteResponseDTO cadastrarCliente(AtendimentoRequestDTO dto) {
         Clientes cliente = new Clientes();
         cliente.setNome(dto.nome());
         cliente.setEmail(dto.email());
         cliente.setTelefone(dto.telefone());
-        Clientes clienteCadastrado = clienteRepository.save(cliente);
-
-        return toResponseDTO(clienteCadastrado);
+        return clienteRepository.save(cliente);
     }
 
     public ClienteResponseDTO buscarPorTelefone(String telefone) {
@@ -34,17 +31,17 @@ public class ClienteService {
         if (cliente == null) {
             throw new ResourceNotFoundException("Cliente com telefone " + telefone + " não encontrado.");
         }
-        return toResponseDTO(cliente);
+        return cliente;
     }
 
     public List<ClienteResponseDTO> listarTodosClientes() {
-        List<Clientes> clientes = clienteRepository.findAll();
-        return clientes.stream()
+        return clienteRepository.findAll()
+                .stream()
                 .map(this::toResponseDTO)
                 .toList();
     }
 
-    public ClienteResponseDTO toResponseDTO(Clientes cliente){
+    public ClienteResponseDTO toResponseDTO(Clientes cliente) {
         return new ClienteResponseDTO(
                 cliente.getNome(),
                 cliente.getEmail(),

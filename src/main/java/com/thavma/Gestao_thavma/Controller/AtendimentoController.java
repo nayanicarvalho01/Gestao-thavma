@@ -1,4 +1,4 @@
 package com.thavma.Gestao_thavma.Controller;
 
-public class ClienteController {
+public class AtendimentoController {
 }
